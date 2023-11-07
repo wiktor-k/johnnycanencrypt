@@ -33,11 +33,11 @@ regex = "1"
 time = "0.2"
 
 [target.'cfg(not(target_os = "windows"))'.dependencies]
-sequoia-openpgp = { default-features = false, features = ["crypto-nettle", "__implicit-crypto-backend-for-tests", "compression"] }
+sequoia-openpgp = { default-features = false, features = ["crypto-nettle"] }
 
 
 [target.'cfg(target_os = "windows")'.dependencies]
-sequoia-openpgp = { default-features = false, features = ["crypto-cng", "__implicit-crypto-backend-for-tests", "compression"] }
+sequoia-openpgp = { default-features = false, features = ["crypto-cng"] }
 
 
 
